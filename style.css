@@ -81,37 +81,103 @@ nav ul li a {
 
 #get-started {
     height: 100vh;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(44, 44, 44);
 }
 
 
 
 .boxes-get {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+}
+
+.boxes-get > div {
+    min-width: 250px;
+    max-width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    margin: 0.5rem 0;
+    padding: 1.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: auto;
+}
+
+.boxes-get > div:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.box1-get,
+.box2-get,
+.box3-get,
+.box4-get {
+    background: none;
+    color: inherit;
 }
 
 .box1-get {
-    background: orange;
-    width: 40vh;
-    height: 80vh;
+    background: linear-gradient(135deg, #1e4fa3 70%, #3a7bd5 100%);
 }
 .box2-get {
-    background: rgb(73, 12, 179);
-    width: 40vh;
-    height: 80vh;
+    background: linear-gradient(135deg, #f36f21 70%, #ffb347 100%);
 }
 .box3-get {
-    background: rgb(63, 44, 9);
-    width: 40vh;
-    height: 80vh;
+    background: linear-gradient(135deg, #23272a 70%, #4f545c 100%);
 }
 .box4-get {
-    background: rgb(255, 208, 122);
-    width: 40vh;
-    height: 80vh;
+    background: linear-gradient(135deg, #eaeaea 70%, #ffffff 100%);
+    color: #23272a;
+}
+
+.box2-get table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 1rem;
+    table-layout: fixed;
+}
+
+.box2-get th,
+.box2-get td {
+    border: 1px solid #fff;
+    padding: 0.5rem 0.7rem;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.15);
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+.box2-get th {
+    background: rgba(0,0,0,0.25);
+    font-weight: 600;
+    color: #ffd700;
+}
+
+.box2-get tr:nth-child(even) td {
+    background: rgba(255,255,255,0.10);
+}
+
+@media (max-width: 900px) {
+    .boxes-get {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .box2-get {
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+    }
 }
