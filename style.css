@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour+Convergence&display=swap');
 
-
 *{
     padding: 0;
     margin: 0;
@@ -62,7 +61,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     padding: 2.5rem 3rem;
-    background: rgba(255, 255, 255, 0.85); /* soft white */
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(18px);
     border-radius: 1.5rem;
     box-shadow: 0 8px 32px 0 rgba(0,0,0,0.10);
@@ -94,8 +93,6 @@ nav ul li a {
     height: auto;
     background-color: rgb(44, 44, 44);
 }
-
-
 
 .boxes-get {
     display: flex;
@@ -223,6 +220,119 @@ nav ul li a {
     font-weight: 700;
 }
 
+#esport-community {
+    padding: 2.5rem 0.5rem;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+
+#esport-community h2,
+#esport-community h3 {
+    color: #fff;
+    text-shadow: 0 2px 12px #111a, 0 1px 0 #222;
+    margin-bottom: 1.2rem;
+}
+
+#esport-community p,
+#esport-community ul li {
+    color: #f3f3f3;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 2px 8px #222a;
+}
+
+#esport-community a {
+    color: #ffd700;
+    font-weight: 600;
+    transition: color 0.2s;
+    text-shadow: 0 2px 8px #222a;
+}
+
+#esport-community a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.esport-community-split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 1rem 0;
+}
+
+.esport-side, .community-side {
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 480px;
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1.2rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    padding: 0;
+}
+
+.esport-side::before, .community-side::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(30,34,40,0.96) 80%,
+        rgba(30,34,40,0.7) 95%,
+        rgba(30,34,40,0.2) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.esport-side > *, .community-side > * {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+    width: 100%;
+    text-shadow: 0 2px 8px #111, 0 1px 0 #222;
+    color: #fff;
+    min-height: 120px;
+    box-sizing: border-box;
+}
+
+.esport-side ul, .community-side ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .esport-community-split {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 0.5rem 0;
+    }
+    .esport-side, .community-side {
+        max-width: 98vw;
+        min-width: 0;
+    }
+    #esport-community h2 {
+        font-size: 1.4rem;
+    }
+    #esport-community h3 {
+        font-size: 1.1rem;
+    }
+    #esport-community p {
+        font-size: 0.98rem;
+    }
+}
+
 @media (max-width: 650px) {
     nav {
         flex-direction: column;
@@ -320,4 +430,44 @@ nav ul li a {
     .navbar-logo {
         font-size: 1.2rem;
     }
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    text-shadow: none;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    text-align: center;
+    text-shadow: none;
+}
+
+a {
+    color: #1e4fa3;
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
