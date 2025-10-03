@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <nav>
+    <nav role="navigation" aria-label="Huvudnavigation">
         <h1><a class="navbar-logo" href="#home-main">Rocket Guide</a></h1>
         <ul>
             <li>
@@ -19,110 +19,138 @@
         </ul>
     </nav>
     <main>
-        <section id="home-main">
-            <!--<figure class="main-picture">
-                <img src="/images/rocket-league.webp" alt="Picture of Rocket League Cars">
-            </figure> -->
+        <section id="home-main" aria-labelledby="welcome-heading">
             <div class="text-section-main">
-                <h2>Welcome User,</h2>
-                <p>your go-to hub for Rocket League! This fast-paced game blends soccer with rocket-powered cars, captivating millions worldwide. Whether you’re a beginner or an aspiring esports star, you’re in the right place.</p>
+                <h2 id="welcome-heading">Welcome User,</h2>
+                <p>your go-to hub for Rocket League! This fast-paced game blends soccer with rocket-powered cars, captivating millions worldwide. Whether you're a beginner or an aspiring esports star, you're in the right place.</p>
             </div>
         </section>
 
-        <section id="get-started">
-            <h1 class="get-started-title">Get started with Rocket league</h1>
+        <section id="get-started" aria-labelledby="get-started-heading">
+            <h1 id="get-started-heading" class="get-started-title">Get started with Rocket league</h1>
             <div class="boxes-get">
-                <div class="box1-get">
-                <p>Welcome to your Rocket League journey!<br> This free-to-play game is available on multiple platforms, and getting started is easy. Follow these steps to jump into the action.</p>
+                <article class="box1-get">
+                    <h3 id="download-guide">Download Guide</h3>
+                    <p>Welcome to your Rocket League journey!<br> This free-to-play game is available on multiple platforms, and getting started is easy. Follow these steps to jump into the action.</p>
                     <ol>
                         <li>Visit <a class="epicgames-box1" href="https://www.epicgames.com/store/en-US/product/rocket-league/home" target="_blank" rel="noopener">Epic Games Store</a>.</li>
                         <li>Click 'Get' to download the game for free.</li>
                         <li>Install and launch Rocket League to create your account.</li>
                     </ol>
-                </div>
-            <div class="box3-get">
-                <p><span>Ready to play</span>?<br>Start with these tips to improve quickly as a beginner!</p>
-                <ul>
-                    <li>Practice boosting and aerials in training mode.</li>
-                    <li>Learn basic controls like turning and jumping.</li>
-                    <li>Play with friends to build confidence.</li>
-                </ul>
-            </div>
-            <div class="box4-get">
-                <p>Explore more to enhance your Rocket League experience! Check out official guides and join the community.</p>
-                <ul>
-                    <li><a href="https://www.rocketleague.com/" target="_blank" rel="noopener">Official Rocket League Website</a></li>
-                    <li><a href="https://www.epicgames.com/help" target="_blank" rel="noopener">Epic Games Support</a></li>
-                </ul>
-            </div>
+                </article>
+                
+                <article class="box3-get">
+                    <h3 id="beginner-tips">Beginner Tips</h3>
+                    <p><span>Ready to play</span>?<br>Start with these tips to improve quickly as a beginner!</p>
+                    <ul>
+                        <li>Practice boosting and aerials in training mode.</li>
+                        <li>Learn basic controls like turning and jumping.</li>
+                        <li>Play with friends to build confidence.</li>
+                    </ul>
+                </article>
+                
+                <article class="box4-get">
+                    <h3 id="resources">Useful Resources</h3>
+                    <p>Explore more to enhance your Rocket League experience! Check out official guides and join the community.</p>
+                    <ul>
+                        <li><a href="https://www.rocketleague.com/" target="_blank" rel="noopener">Official Rocket League Website</a></li>
+                        <li><a href="https://www.epicgames.com/help" target="_blank" rel="noopener">Epic Games Support</a></li>
+                    </ul>
+                </article>
             </div>
 
-            <div class="box2-get">
-                <h3>System Requirements</h3>
+            <article class="box2-get">
+                <h3 id="system-requirements">System Requirements</h3>
                 <table>
-                    <tr>
-                        <th></th>
-                        <th>OS</th>
-                        <th>Processor</th>
-                        <th>Memory</th>
-                        <th>Graphics</th>
-                        <th>DirectX</th>
-                        <th>Network</th>
-                    </tr>
-                    <tr>
-                        <th>Minimum</th>
-                        <td>Windows 7 (64 bit) or Newer</td>
-                        <td>2.5 GHz Dual Core</td>
-                        <td>4 GB RAM</td>
-                        <td>NVIDIA GeForce GTX 760, AMD Radeon R9 270X, or Better</td>
-                        <td>DirectX Version 11.0</td>
-                        <td>Broadband Internet connection</td>
-                    </tr>
-                    <tr>
-                        <th>Recommended</th>
-                        <td>Windows 7 (64 bit) or Newer</td>
-                        <td>3.0+ GHz Quad Core</td>
-                        <td>8 GB RAM</td>
-                        <td>NVIDIA Geforce GTX 1060, AMD Radeon RX 470, or better</td>
-                        <td>DirectX Version 11.0</td>
-                        <td>Broadband Internet connection</td>
-                    </tr>
+                    <caption class="sr-only">Rocket League system requirements for Windows PC</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Requirement Type</th>
+                            <th scope="col">OS</th>
+                            <th scope="col">Processor</th>
+                            <th scope="col">Memory</th>
+                            <th scope="col">Graphics</th>
+                            <th scope="col">DirectX</th>
+                            <th scope="col">Network</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Minimum</th>
+                            <td>Windows 7 (64 bit) or Newer</td>
+                            <td>2.5 GHz Dual Core</td>
+                            <td>4 GB RAM</td>
+                            <td>NVIDIA GeForce GTX 760, AMD Radeon R9 270X, or Better</td>
+                            <td>DirectX Version 11.0</td>
+                            <td>Broadband Internet connection</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Recommended</th>
+                            <td>Windows 7 (64 bit) or Newer</td>
+                            <td>3.0+ GHz Quad Core</td>
+                            <td>8 GB RAM</td>
+                            <td>NVIDIA Geforce GTX 1060, AMD Radeon RX 470, or better</td>
+                            <td>DirectX Version 11.0</td>
+                            <td>Broadband Internet connection</td>
+                        </tr>
+                    </tbody>
                 </table>
-            </div>
-
+            </article>
         </section>
 
         <section id="esport-community" aria-labelledby="esport-community-heading">
             <h2 id="esport-community-heading">Esport & Community Hub</h2>
         
             <div class="esport-community-split">
-                <div class="esport-side" style="background-image: url('/images/g2-stride-win-rlcs-rocket-league-london-major-2024.jpg');">
-                <p>Today, September 27, 2025, the RLCS 2025 World Championship wrapped up in Lyon, France, with a $1,200,000 prize pool. Top teams clashed in an epic finale—check out the highlights and see the champions crowned!</p>
+                <article class="esport-side">
+                    <figure>
+                        <img src="/images/g2-stride-win-rlcs-rocket-league-london-major-2024.jpg" 
+                             alt="G2 Stride celebrating their RLCS London Major 2024 victory" 
+                             loading="lazy">
+                    </figure>
+                    <h3 id="rlcs-highlights">RLCS Highlights</h3>
+                    <p>Today, September 27, 2025, the RLCS 2025 World Championship wrapped up in Lyon, France, with a $1,200,000 prize pool. Top teams clashed in an epic finale—check out the highlights and see the champions crowned!</p>
+                    <ul>
+                        <li><a href="https://www.twitch.tv/rocketleague" target="_blank" rel="noopener">Watch the Final Replay</a></li>
+                        <li><a href="https://esports.rocketleague.com" target="_blank" rel="noopener">Official RLCS Recap</a></li>
+                        <li><a href="https://liquipedia.net/rocketleague/Rocket_League_Championship_Series/2025" target="_blank" rel="noopener">Full Tournament Results</a></li>
+                    </ul>
+                </article>
                 
-                <h3 id="rlcs-highlights">RLCS Highlights</h3>
-                <ul>
-                    <li><a href="https://www.twitch.tv/rocketleague" target="_blank" rel="noopener">Watch the Final Replay</a></li>
-                    <li><a href="https://esports.rocketleague.com" target="_blank" rel="noopener">Official RLCS Recap</a></li>
-                    <li><a href="https://liquipedia.net/rocketleague/Rocket_League_Championship_Series/2025" target="_blank" rel="noopener">Full Tournament Results</a></li>
-                </ul>
-                </div>
-                
-                <div class="community-side" style="background-image: url('/images/rlcs-s5-venue.avif');">
-                <p>6Mans, launched in 2017, is a Rocket League haven with over 75,000 users, offering competitive PUGs post-RLCS today. With ELO rankings and voice comms, it’s perfect for sharpening skills and building teams in the grassroots scene.</p>
-                
-                <h3 id="join-6mans">Get Involved with 6Mans</h3>
-                <ul>
-                    <li><a href="https://www.rl6mans.com/" target="_blank" rel="noopener">Join the 6Mans Site</a> (Diamond+ rank required).</li>
-                    <li><a href="https://discord.com/invite/6mans" target="_blank" rel="noopener">NA Discord Server</a> (38,000+ members).</li>
-                    <li><a href="https://discord.com/invite/6manseu" target="_blank" rel="noopener">EU Discord Server</a> (25,000+ members).</li>
-                </ul>
-                </div>
+                <article class="community-side">
+                    <figure>
+                        <img src="/images/rlcs-s5-venue.avif" 
+                             alt="RLCS Season 5 tournament venue with crowd" 
+                             loading="lazy">
+                    </figure>
+                    <h3 id="join-6mans">Get Involved with 6Mans</h3>
+                    <p>6Mans, launched in 2017, is a Rocket League haven with over 75,000 users, offering competitive PUGs post-RLCS today. With ELO rankings and voice comms, it's perfect for sharpening skills and building teams in the grassroots scene.</p>
+                    <ul>
+                        <li><a href="https://www.rl6mans.com/" target="_blank" rel="noopener">Join the 6Mans Site</a> (Diamond+ rank required).</li>
+                        <li><a href="https://discord.com/invite/6mans" target="_blank" rel="noopener">NA Discord Server</a> (38,000+ members).</li>
+                        <li><a href="https://discord.com/invite/6manseu" target="_blank" rel="noopener">EU Discord Server</a> (25,000+ members).</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
-        <section id="about-us">
-            <h1>About Us</h1>
+        <section id="about-us" aria-labelledby="about-us-heading">
+            <h1 id="about-us-heading">About Us</h1>
+            <p>I’m Joel, a passionate Rocket League enthusiast, driven by the excitement of the RLCS 2025 World Championship that wrapped up on September 27. My mission is to guide new players with tutorials, share esport insights, and build a community with tools like Discord, all to fuel your journey from beginner to pro!</p>
         </section>
+
+        <footer id="site-footer" aria-label="Site Footer">
+            <div class="footer-content">
+                <p>© 2025 Rocket League Guide by Joel. All rights reserved.</p>
+                <p>Email: joel.daizy.lofgren@gmail.com</p>
+                    <div class="footer-links">
+                        <a href="https://discord.gg/rocketguide" target="_blank" rel="noopener">Join Discord: discord.gg/rocketguide</a>
+                        <a href="https://www.linkedin.com/in/joel-löfgren-ab2899235" target="_blank" rel="noopener">Follow LinkedIn: Joel Löfgren</a>
+                        <a href="https://www.instagram.com/joellofgren08" target="_blank" rel="noopener">Check Instagram: @joellofgren08</a>
+                    </div>
+                <p>Your go-to hub for Rocket League tips, esport action, and community vibes—powered by a solo fan with a passion for the game!</p>
+            </div>
+        </footer>
     </main>
 </body>
 </html>
